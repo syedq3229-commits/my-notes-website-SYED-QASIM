@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9th Class My Notes</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #172554;
+}
+
+#notes {
+    background: white;
+    padding: 22px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #0002;
+    min-height: 150px;
+}
+
+#notes h2 {
+    color: #2563eb;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+@media(max-width: 450px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 9th Class My Notes</h1>
+    <p>Welcome to Your Study Website</p>
+</header>
+
+<div class="container">
+
+    <h2>Choose Your Subject</h2>
+
+    <div class="buttons">
+        <button onclick="showNotes('english')">English</button>
+        <button onclick="showNotes('urdu')">Urdu</button>
+        <button onclick="showNotes('math')">Mathematics</button>
+        <button onclick="showNotes('computer')">Computer</button>
+    </div>
+
+    <div id="notes">
+        <h2>Welcome Students!</h2>
+        <p>Click any subject button to see your notes here.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 My Notes | All Rights Reserved</p>
+    <p>Study Hard, Achieve More ⭐</p>
+</footer>
+
+<script>
+
+function showNotes(subject) {
+
+    let notes = document.getElementById("notes");
+
+    if (subject === "english") {
+        notes.innerHTML = `
+        <h2>English Notes</h2>
+        <h3>Parts of Speech</h3>
+        <p>There are eight parts of speech:</p>
+        <ol>
+        <li>Noun</li>
+        <li>Pronoun</li>
+        <li>Verb</li>
+        <li>Adjective</li>
+        <li>Adverb</li>
+        <li>Preposition</li>
+        <li>Conjunction</li>
+        <li>Interjection</li>
+        </ol>`;
+    }
+
+    else if (subject === "urdu") {
+        notes.innerHTML = `
+        <h2>اردو نوٹس</h2>
+        <h3>اسم کی تعریف</h3>
+        <p>کسی شخص، جگہ یا چیز کے نام کو اسم کہتے ہیں۔</p>
+        <h3>مثالیں</h3>
+        <p>علی، لاہور، کتاب، قلم</p>`;
+    }
+
+    else if (subject === "math") {
+        notes.innerHTML = `
+        <h2>Mathematics Notes</h2>
+        <h3>Algebra</h3>
+        <p>Algebra is a branch of mathematics.</p>
+        <h3>Example</h3>
+        <p>2x + 4 = 10</p>
+        <p>2x = 10 - 4</p>
+        <p>x = 3</p>`;
+    }
+
+    else if (subject === "computer") {
+        notes.innerHTML = `
+        <h2>Computer Notes</h2>
+        <h3>What is a Computer?</h3>
+        <p>A computer is an electronic machine that processes data.</p>
+        <h3>Components</h3>
+        <ol>
+        <li>Monitor</li>
+        <li>Keyboard</li>
+        <li>Mouse</li>
+        <li>CPU</li>
+        </ol>`;
+    }
+
+}
+
+</script>
+
+</body>
+</html>
